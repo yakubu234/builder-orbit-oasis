@@ -1,7 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Mail, Phone, MapPin, Building2, CreditCard, FileSignature } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Building2,
+  CreditCard,
+  FileSignature,
+} from "lucide-react";
 
 export default function UserProfile() {
   const userInfo = {
@@ -20,7 +27,7 @@ export default function UserProfile() {
     accountName: "",
     bankName: "",
     address: "7 gbokoniyi drive, Abeokuta",
-    creditSource: "null"
+    creditSource: "null",
   };
 
   return (
@@ -33,7 +40,8 @@ export default function UserProfile() {
               <Avatar className="w-20 h-20 border-4 border-brand-500">
                 <AvatarImage src="/placeholder.svg" alt="Profile" />
                 <AvatarFallback className="bg-brand-100 text-brand-700 text-xl font-semibold">
-                  {userInfo.firstName.charAt(0).toUpperCase()}{userInfo.lastName.charAt(0).toUpperCase()}
+                  {userInfo.firstName.charAt(0).toUpperCase()}
+                  {userInfo.lastName.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
               <div className="flex-1">
@@ -42,10 +50,16 @@ export default function UserProfile() {
                 </h1>
                 <p className="text-gray-600 mb-3">{userInfo.occupation}</p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="bg-brand-50 text-brand-600 border-brand-200">
+                  <Badge
+                    variant="outline"
+                    className="bg-brand-50 text-brand-600 border-brand-200"
+                  >
                     {userInfo.memberNo}
                   </Badge>
-                  <Badge variant="outline" className="bg-brand-50 text-brand-600 border-brand-200">
+                  <Badge
+                    variant="outline"
+                    className="bg-brand-50 text-brand-600 border-brand-200"
+                  >
                     {userInfo.branch}
                   </Badge>
                 </div>
@@ -60,9 +74,11 @@ export default function UserProfile() {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Mail className="w-5 h-5 text-brand-500" />
-                <h2 className="text-lg font-medium text-brand-500">Contact Information</h2>
+                <h2 className="text-lg font-medium text-brand-500">
+                  Contact Information
+                </h2>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-gray-400 mt-1" />
@@ -111,15 +127,19 @@ export default function UserProfile() {
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Building2 className="w-5 h-5 text-brand-500" />
-                <h2 className="text-lg font-medium text-brand-500">Banking Information</h2>
+                <h2 className="text-lg font-medium text-brand-500">
+                  Banking Information
+                </h2>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CreditCard className="w-4 h-4 text-gray-400 mt-1" />
                   <div>
                     <p className="text-sm text-gray-500">Account Number</p>
-                    <p className="text-gray-900">{userInfo.accountNumber || "—"}</p>
+                    <p className="text-gray-900">
+                      {userInfo.accountNumber || "—"}
+                    </p>
                   </div>
                 </div>
 
@@ -127,7 +147,9 @@ export default function UserProfile() {
                   <div className="w-4 h-4 mt-1"></div>
                   <div>
                     <p className="text-sm text-gray-500">Account Name</p>
-                    <p className="text-gray-900">{userInfo.accountName || "—"}</p>
+                    <p className="text-gray-900">
+                      {userInfo.accountName || "—"}
+                    </p>
                   </div>
                 </div>
 
@@ -156,16 +178,22 @@ export default function UserProfile() {
           <CardContent className="p-6">
             <div className="flex items-center gap-2 mb-4">
               <FileSignature className="w-5 h-5 text-brand-500" />
-              <h2 className="text-lg font-medium text-brand-500">Digital Signature</h2>
+              <h2 className="text-lg font-medium text-brand-500">
+                Digital Signature
+              </h2>
             </div>
-            
+
             <div className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-lg p-8 text-center">
               <div className="bg-white p-6 rounded-lg shadow-sm inline-block">
-                <div className="text-3xl font-signature text-gray-800 mb-4" style={{ fontFamily: 'cursive' }}>
+                <div
+                  className="text-3xl font-signature text-gray-800 mb-4"
+                  style={{ fontFamily: "cursive" }}
+                >
                   another me
                 </div>
                 <p className="text-sm text-gray-500">
-                  Authorized signature for {userInfo.firstName} {userInfo.lastName}
+                  Authorized signature for {userInfo.firstName}{" "}
+                  {userInfo.lastName}
                 </p>
               </div>
             </div>
