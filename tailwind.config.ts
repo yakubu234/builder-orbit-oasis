@@ -14,6 +14,14 @@ export default {
     },
     extend: {
       colors: {
+        brand: {
+          DEFAULT: "#43B9B2",
+          50: "#f0fffe",
+          100: "#ccfbf4",
+          500: "#43B9B2",
+          600: "#3da49e",
+          700: "#359089",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
